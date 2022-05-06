@@ -1,28 +1,37 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>ETAPA 3</title>
-	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-	<div id="main">
-		<h1> Etapa 3 - Exercicio 3</h1>
-		Introdução a Javascript
-		<table>
-			<tr>
-				<td> Nome: </td> <td> <input type="text"  id="nomealuno" /> </td>
-				<td> Periodo: </td> <td> <input type="text"  id="periodoaluno" /> </td>
-				<td> Nota: </td> <td> <input type="number"  id="notaaluno" /> </td>
-			</tr>
-			<tr> 
-				 <td>  <input type="button" value="Adiciona Aluno" onclick="adicionaAluno()" />  </td>
-			     <td>  <input type="button" value="Mostra Alunos"   onclick="mostraAlunos()"  />  </td>
-				 <td>  Nr Alunos </td>  <td id="nralunos"> 0 </td>
- 			</tr>
-		</table>
-		<div id="listaaluno"> </div>
-	</div>
+    <script type="text/javascript">
+    function hMaximo(){
+        res.value = parseFloat ((v1.value) **2 ) / (2*10) ;
+
+    };
+    //parse(tipo de valor) define o valor que vai na função 
+    //cores roxas são comandos nativos do js
+    //
+    function tSubida(){
+        valor.value = parseFloat (v1.value)/10 ;
+        console.log(value)
+        
+    };
+    </script>
+
+
+
+    <h1> Calculadora de altura e tempo no ar </h1>
+    Qual a velocidade do objeto em m/s ? : <input type="float" id="v1" value=""><br>
+    
+    <input type="button" value="somar"
+        onclick="hMaximo(); tSubida() "><br> 
+    
+
+    Altura máxima: <input type="text" id="res" value="0" readonly>
+    Tempo de subida: <input type="text" id="valor" value="0" readonly>
 </body>
 </html>

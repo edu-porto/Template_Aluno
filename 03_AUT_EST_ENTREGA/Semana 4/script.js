@@ -7,7 +7,7 @@ var anotarExp = {
 function anotarExperiencia(){
   var nome = document.getElementById("ExperienciaUser").value;
   console.log(nome);
-  var experiencia = Object.create(frase);
+  var experiencia = Object.create(anotarExp);
   experiencia.frase = nome;
   ListaExperiencias.push(experiencia);
 };
@@ -23,3 +23,5 @@ function mostrarExperiencia(){
   document.getElementById("listaexperiencias2").innerHTML = lista;
   console.log(ListaExperiencias);
 };
+//ESSA FUNCAO PEGA O INPUT DE ANOTAREXPERIENCIA E TORNA O MESMO UM OBJETO DENTRO DO
+//DICIONARIO. ASSIM, CONSIGO COLOCAR VARIAS EXPERIENCIAS NO CURRICULUM

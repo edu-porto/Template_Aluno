@@ -33,11 +33,11 @@ var sql = 'SELECT * FROM escola';
 });
 
 
-app.post('/userinsert', urlencodedParser, (req, res) => {
+app.get('/userinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
-
-	sql = "INSERT INTO tbUser (title, id, completed) VALUES ('" + req.body.title + "', 33, false)";
+	sql = "INSERT INTO escola (ESCOLA, ID ESCOLA) VALUES ('" + req.body.title + "', 3, false)";
+	//sql = "INSERT INTO escola (ESCOLA, ID ESCOLA) VALUES ('FGV 5', 3)";
 	var db = new sqlite3.Database(DBPATH); 
 	db.run(sql, [],  err => {
 		if (err) {

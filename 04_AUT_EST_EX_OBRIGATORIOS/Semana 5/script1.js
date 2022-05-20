@@ -27,19 +27,10 @@ function anotarExperiencia(){
 function somar(){
     var A = ListaExperiencias;
     var B = listaB;
+    var ultimoA = A[A.length - 1];
+    var ultimoB = B[B.length - 1];
+
     
-    const converterA = A.map(String => {
-        return Number(String);
-    });
-
-    const converterB = B.map(String => {
-        return Number(String);
-    });
-
-
-    var ultimoA = converterA[converterA.length - 1];
-    var ultimoB = converterB[converterB.length - 1];
-
     var total = ultimoA + ultimoB
 
     console.log(total)

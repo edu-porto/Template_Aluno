@@ -7,7 +7,7 @@ const hostname = '127.0.0.1';
 const port = 3061;
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
-const DBPATH = 'mediaAlunos.db';
+const DBPATH = 'dbUser.db';
 
 
 app.use(express.static("../frontend/"));
@@ -33,7 +33,7 @@ var sql = 'SELECT * FROM tbUser ORDER BY title COLLATE NOCASE';
         }
         res.json(rows);
     });
-    db.close(); // Fecha o banco
+    db.close(); // Fecha o banco// all roda a consulta
 });
 
 // Insere um registro (é o C do CRUD - Create)

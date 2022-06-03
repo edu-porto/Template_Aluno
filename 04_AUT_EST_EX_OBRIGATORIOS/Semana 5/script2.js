@@ -26,9 +26,12 @@ function testar_logica(){
 
   var resultados = "<h1>" ;
   document.getElementById("resultados").innerHTML =  testando100 ;
-  resultados.appendChild(resultados)
-  resultados.appendChild(document.createElement("br"))
-  document.getElementById("resultados").innerHTML =  testando50 ;
+  document.getElementById("resultados50").innerHTML =  testando50 ;
+  document.getElementById("resultados20").innerHTML =  testando20 ;
+  document.getElementById("resultados10").innerHTML =  testando10 ;
+  document.getElementById("resultados5").innerHTML =  testando5 ;
+  document.getElementById("resultados2").innerHTML =   testando2 ;
+  document.getElementById("resultados1").innerHTML =   testando1 ;
   
   console.log(testando100,testando50,testando20,testando10,testando5,testando2,testando1)
 }

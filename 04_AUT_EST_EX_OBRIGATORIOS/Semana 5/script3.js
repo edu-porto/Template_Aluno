@@ -2,27 +2,38 @@
 
 function testar_logica(){
   var inputUser = document.getElementById("numeroA").value;
-  //var numeroFoco = document.getElementById("NumeroFoco").value;
-
-  var lista = [inputUser]
-
-  var Testando = [lista];
+  var numeroFoco = document.getElementById("NumeroFoco").value;
+  var indice
+  var lista = inputUser.split(',')
+  //var lista = [inputUser]
   
-  var tamanho = Testando.length;
-  for (var i = 0; i < length; i++){
-    for (var t = 0; t < (length - i - 1); t++){
-      if(tamanho[t] > tamanho[t+1]){
-        var tmp = tamanho[t];
-        tamanho[t] = tamanho[t+1];
-        tamanho[t+1] = tmp ;
-      }
+// colocar a lista em indice 
+const comp = (a, b) => a - b;
+
+var lista_ordenada = lista.sort(comp)
+
+  for ( let i in lista ){
+    if (lista[i] == numeroFoco){
+      indice = i
+      break;
     }
   }
 
-  var arr = [inputUser]
-  testar_logica(arr)
 
-  console.log(arr)
+ for (let n in lista){
+   if(lista[n] == numeroFoco){
+     indice = n
+     break
+   } else {
+     indice = -1
+   }
+ }
+
+
+  
+  console.log(lista_ordenada)
+  console.log(indice)
+  
   //document.getElementById("resultados1").innerHTML =   testando1 ;
   
   //console.log(testando100,testando50,testando20,testando10,testando5,testando2,testando1)

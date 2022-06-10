@@ -1,0 +1,164 @@
+﻿*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  background: -moz-linear-gradient(-45deg, #CAFFB9 15%, #AEF78E 100%);
+  background: -webkit-linear-gradient(-45deg, #CAFFB9 15%,#AEF78E 100%);
+  background: linear-gradient(135deg, #CAFFB9 15%,#AEF78E 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
+}
+.quotes {
+  width: 80vw;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.quotes .box {
+  position: relative;
+  width: 25vw;
+  height: 50vh;
+  min-height: 320px;
+  opacity: 0.3;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 3;
+  box-sizing: border-box;
+  padding: 30px;
+ 
+}
+
+
+
+
+.quotes .box.box2 {
+  position: relative;
+  width: 25vw;
+  height: 50vh;
+  min-height: 320px;
+  opacity: 0.3;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 3;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.quotes .box.box3 {
+  position: relative;
+  width: 25vw;
+  height: 50vh;
+  min-height: 320px;
+  opacity: 0.3;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 3;
+  box-sizing: border-box;
+  padding: 30px;
+ 
+}
+
+
+.quotes .box::before {
+  content: '\201C';
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  font-size: 120px;
+  opacity: 0.6;
+  background: #4C4C47;
+  pointer-events: none;
+}
+.quotes .box::after {
+  content: '\201D';
+  position: absolute;
+  bottom: -10%;
+  right: 5%;
+  font-size: 120px;
+  opacity: 0;
+  background: transparent;
+  filter: invert(1);
+  pointer-events: none;
+}
+.quotes .box p {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.quotes .box h2 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 10%;
+  right: 10%;
+  font-size: 1.5rem;
+}
+.quotes .box.box:hover p{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+  
+
+.quotes .box:hover {
+  color: #000000;
+  box-shadow: 20px 50px 100px #4C4C47;
+}
+.quotes .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.quotes .box.box1:hover,
+.quotes .box.box1:hover~.bg {
+  opacity: 1;
+
+}
+.quotes .box.box2:hover,
+.quotes .box.box2:hover~.bg {
+  opacity: 1;
+ 
+}
+
+.quotes .box.box3:hover,
+.quotes .box.box3:hover~.bg {
+  opacity: 1;
+  
+}
+
+@media (max-width:767px){
+  .quotes{
+      width:100%;
+      padding:20px; 
+  }
+
+  
+}
+
+

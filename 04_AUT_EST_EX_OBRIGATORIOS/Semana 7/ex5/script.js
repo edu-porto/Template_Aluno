@@ -1,27 +1,18 @@
 ﻿function gravar (){
   var quantiaAlunos = document.getElementById("numeroAlunos").value;
-  var notasTrabalho = document.getElementById("notaTrabalho").value;
-  var notasProva = document.getElementById("notaProva").value;
+  var notasTrabalho = [document.getElementById("notaTrabalho").value];
+  var notasProva = [document.getElementById("notaProva").value];
 
-
-  var alunosTrabalho = (notasTrabalho).split() ;
-  var alunosProva = (notasProva).split() ;
-
-  // essa função separa os algorismos
-
-  // o javascript não tá entendendo que isso é uma lista e que eu quero separar cada elemento dela 
+  if( quantiaAlunos.value == notasTrabalho.value && (quantiaAlunos.value == notasProva.value))
+    console.log("works") 
+    else{
+      alert("Não é o mesmo número de alunos")
+    }
   
-
-  console.log(quantiaAlunos + " nota trabalho: " + alunosTrabalho[1] + "notas prova: " + alunosProva)
-
-
-
-
-
 };
 
 
-function fun() {
+function numeroInputs() {
   /*Getting the number of text fields*/
   var no = document.getElementById("idname").value;
   /*Generating text fields dynamically in the same form itself*/

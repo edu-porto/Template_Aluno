@@ -8,30 +8,33 @@ function ordenar (){
 
   var array = [];
   let total = [];
-  let primos = true
-  var monkey = []
+  let primos = [];
   //Com esse for consigo adicionar um numero de cada vez a array total 
   for (let i = limite1; i <= limite2; i++) {
   
-    array = + [i] ;
-    total [i] = array
+     array = + [i] ;
+     total [i] = array
+    let condicao = 0;
 
-  
-  };
-    // agora preciso fazer com que cada elemento da array total seja checado 
-    // se atender as condiçoes especificas de ser primo o valor é anotado em uma outra array 
+    // aqui checamos se o número não é primo 
+      for ( let j = 2; j < i; j++){
+        if (i % j == 0){
+          condicao = 1;
+          break; 
+        }
+      }
 
-  total.forEach( element => {
-    if (element % 2 !== 0 && element % 5 !== 0 && element % 1 == 0){
-      monkey.push(element);
+      // aqui os numeros primos são colocados dentro de uma lista
+      if ( i > 1 && condicao == 0){
+        primos.push(i)
+      }
+
     }
     
-  });
-    
-  //2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43
-  //47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109,
 
-    console.log(monkey)
+    
+    numeros.innerHTML += `Os seguintes números são primos : ${primos} <br />`;
+  
   
   };  
 

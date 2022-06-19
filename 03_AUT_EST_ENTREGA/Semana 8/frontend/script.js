@@ -60,11 +60,10 @@ function adicionarInfos(){
       success: data => {
               data.forEach(element => {
                 listaInfos.push(element)
-                listaInfos.innerHTML += `
-                  <div id="question${element['info']}">
+                informacoesExtras.innerHTML += `
                       <div class="row question-header">
                           <div class="col-sm-10">
-                              <h5>Questão ${element['info']}</h5>
+                              <h5>${element['info']}</h5>
                           </div`;
              
               });

@@ -1,23 +1,19 @@
 ﻿function ordenar (){
-  //var numero = document.getElementById("numero").value
 
-
-  // com essa função consigo separar cada algoritmo do input 
-  //const arrayNumeros = numero
-  var total = 1;
+  var total = 0;
   var numeroAtual = 1;
   var numeroAnterior = 0;
-  var limite = 13;
+  var limite = document.getElementById("numero").value
 
- // o for não está parando no input que limito 
-  for (let i = 1; i <= limite ; i++) {
+  for (let i = 1; i <= limite; i++) {
   
-    total  = numeroAnterior + numeroAtual
-    numeroAnterior = numeroAtual
-    numeroAtual = total
+    total  = numeroAnterior + numeroAtual;
+    console.log (" O TOTAL " + total + " n anterior " + numeroAnterior +  " num atual " + numeroAtual)
+    numeroAnterior = numeroAtual;
+    numeroAtual = total;
 
     };
-  console.log(total)
-  return(total)
+  
+    sequencia.innerHTML +=`O ${limite}º número na sequência de Fibonacci é ${total} `;
 
 };
